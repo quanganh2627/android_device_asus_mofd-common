@@ -5,7 +5,9 @@ unix_socket_connect(gpsd, property, init);
 unix_socket_connect(gpsd, rild, rild);
 
 allow gpsd sensorservice_service:service_manager find;
-
+type sysfs_uart_power_ctrl, fs_type, sysfs_type;
+allow gpsd sysfs_uart_power_ctrl : file { ioctl read write getattr lock append open } ;
+allow gpsd gpsd : lnk_file { ioctl read getattr lock open } ;
 # Use sockets provided by system_server via binder or local socket.
 allow gpsd system_server:unix_stream_socket { read write setopt getattr getopt shutdown };
 
