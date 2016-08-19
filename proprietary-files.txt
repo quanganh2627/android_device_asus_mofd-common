@@ -300,11 +300,12 @@ system/vendor/firmware/00imx135-0-0x8-0x2.drvb
 system/vendor/firmware/00imx135-0-0x8-0x5.drvb
 system/vendor/firmware/00ov8830-0-0x2-0.drvb
 system/vendor/firmware/01s5k8aay.drvb
+system/lib/hw/m10mo/camera.m10mo.so
 
 # DRM
 system/lib/libkeymaster.so
-system/lib/hw/keystore.moorefield.so:lib/hw/keystore.vendor.moorefield.so
-system/lib/libcrypto.so:lib/libstock_crypto.so
+system/lib/hw/keystore.moorefield.so:system/lib/hw/keystore.vendor.moorefield.so
+system/lib/libcrypto.so:system/lib/libstock_crypto.so
 system/vendor/lib/drm/libdrmwvmplugin.so
 system/vendor/lib/mediadrm/libwvdrmengine.so
 system/vendor/lib/libWVStreamControlAPI_L1.so
@@ -355,7 +356,7 @@ system/bin/houdini
 system/lib/libhoudini.so
 
 # Media
-sbin/intel_prop
+system/bin/intel_prop
 system/etc/firmware/msvdx.bin.prod
 system/etc/firmware/msvdx.bin.verf
 system/etc/firmware/topaz.bin.prod
@@ -759,12 +760,17 @@ system/lib/libsensorhub.so
 system/lib/libvirtualsensors.so
 
 # Thermal
-sbin/thermald
+system/bin/thermald
 
-sbin/pclinkd
+#system/bin/pclinkd
 
 # WiFi
 system/etc/wifi/bcmdhd.cal
 system/etc/wifi/bcmdhd_zx551ml.cal
 system/etc/firmware/fw_bcmdhd_apsta.bin
 system/etc/firmware/fw_bcmdhd.bin
+
+# Below libs will be change its name
+system/lib/hw/camera.mofd_v1.so
+system/lib/hw/keystore.moorefield.so
+system/lib/libcrypto.so

@@ -91,13 +91,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.enable.native.bridge.exec=1
 
-ADDITIONAL_DEFAULT_PROPERTIES += ro.dalvik.vm.native.bridge=libhoudini.so
+PRODUCT_PROPERTY_OVERRIDES += ro.dalvik.vm.native.bridge=libhoudini.so
 
 #Support Simcard hotswap
 ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.tel.hot_swap.support=true
-
-
+    
 #Support MicroSD-writeable on Asus ZenUI's apps
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.epad.mount_point.microsd=/storage/MicroSD \
@@ -106,6 +105,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.epad.mount_point.usbdisk3=/storage/USBdisk3 \
     ro.epad.mount_point.usbdisk4=/storage/USBdisk4 \
     ro.epad.mount_point.usbdisk5=/storage/USBdisk5
+
+#TWRP fstab
+PRODUCT_COPY_FILES += \
+    device/asus/mofd-common/twrp.fstab:recovery/root/etc/twrp.fstab
+
 
 # Keyhandler
 PRODUCT_PACKAGES += \
