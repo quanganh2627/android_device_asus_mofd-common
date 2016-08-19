@@ -75,3 +75,8 @@
 /sys/devices/system/cpu/cpufreq interactive/touchboost_freq             0644 system system
 /sys/devices/system/cpu/cpufreq interactive/touchboostpulse             0220 system system
 /sys/devices/system/cpu/cpufreq interactive/touchboostpulse_duration    0644 system system
+
+#PClink
+/dev/android_pclink        0660   adb        adb
+/dev/android_pclink_enable 0660   adb        adb
+

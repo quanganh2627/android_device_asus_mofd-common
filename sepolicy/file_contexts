@@ -132,3 +132,7 @@
 
 # wifi
 /config/wifi(/.*)?                      u:object_r:wifi_config_file:s0
+
+#PCLink
+/dev/android_pclink.*	u:object_r:pclink_device:s0
+/dev/socket/pclinkd	u:object_r:pclinkd_socket:s0

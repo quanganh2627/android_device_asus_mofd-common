@@ -14,16 +14,16 @@ function extract() {
         fi
         if [ "$SRC" = "adb" ]; then
             # Try CM target first
-            adb pull /system/$DEST $2/$DEST
+            adb pull /$DEST $2/$DEST
             # if file does not exist try OEM target
             if [ "$?" != "0" ]; then
-                adb pull /system/$FILE $2/$DEST
+                adb pull /$FILE $2/$DEST
             fi
         else
-            if [ -r $SRC/system/$DEST ]; then
-                cp $SRC/system/$DEST $2/$DEST
+            if [ -r $SRC/$DEST ]; then
+                cp $SRC/$DEST $2/$DEST
             else
-                cp $SRC/system/$FILE $2/$DEST
+                cp $SRC/$FILE $2/$DEST
             fi
         fi
     done
