@@ -210,6 +210,6 @@ CONFIG_HS20                 := true
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcmdhd.bin"
-
+BLOCK_BASED_OTA := false
 # Use the non-open-source parts, if they're present
 -include vendor/asus/mofd-common/BoardConfigVendor.mk
