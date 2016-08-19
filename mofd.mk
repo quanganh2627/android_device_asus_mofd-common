@@ -93,6 +93,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ADDITIONAL_DEFAULT_PROPERTIES += ro.dalvik.vm.native.bridge=libhoudini.so
 
+#Support Simcard hotswap
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.tel.hot_swap.support=true
+
 # Keyhandler
 PRODUCT_PACKAGES += \
     CMActions \
