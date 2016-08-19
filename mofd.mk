@@ -97,6 +97,16 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.dalvik.vm.native.bridge=libhoudini.so
 ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.tel.hot_swap.support=true
 
+
+#Support MicroSD-writeable on Asus ZenUI's apps
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.epad.mount_point.microsd=/storage/MicroSD \
+    ro.epad.mount_point.usbdisk1=/storage/USBdisk1 \
+    ro.epad.mount_point.usbdisk2=/storage/USBdisk2 \
+    ro.epad.mount_point.usbdisk3=/storage/USBdisk3 \
+    ro.epad.mount_point.usbdisk4=/storage/USBdisk4 \
+    ro.epad.mount_point.usbdisk5=/storage/USBdisk5
+
 # Keyhandler
 PRODUCT_PACKAGES += \
     CMActions \
